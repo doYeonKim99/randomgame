@@ -1,5 +1,6 @@
 package kr.hs.emirim.dok96.gotchicken;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -30,6 +31,10 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        Toast.makeText(this,"앙 진선띠 닭찌찌?",Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"집에 가구시퐁!!",Toast.LENGTH_LONG).show();
+        Intent intent=new Intent(this,ResultActivity.class);
+        startActivity(intent);
+
+
     }
 }
