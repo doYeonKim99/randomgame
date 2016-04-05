@@ -26,15 +26,32 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     @Override
     protected void onResume() {
         super.onResume();
-        mName.setText("");
+        mName.setText(null);
+
     }
 
     @Override
     public void onClick(View v) {
-        Toast.makeText(this,"집에 가구시퐁!!",Toast.LENGTH_LONG).show();
-        Intent intent=new Intent(this,ResultActivity.class);
-        startActivity(intent);
 
+          String name = mName.getText().toString(); //실수 주의 반드시 toString()으로 변형해서 쓰기
+//        if(name==null){
+//            Toast.makeText(this, name + "이름을 입력해 주세요!!", Toast.LENGTH_LONG).show();
+//        }else {
+//            Toast.makeText(this, name + "씨,집에 가구시퐁!!", Toast.LENGTH_LONG).show();
+//            Intent intent = new Intent(this, ResultActivity.class);
+//            startActivity(intent);
+//        }
+        try{
+            Toast.makeText(this, name + "씨,집에 가구시퐁!!", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, ResultActivity.class);
+            startActivity(intent);
+        }
+        catch(NullPointerException e){
+            Toast.makeText(this, name + "이름을 입력해 주세요!!", Toast.LENGTH_LONG).show();
+        }
+        catch(Exception e){
+            Toast.makeText(this,"정말 죄송하지만 오류가 납니다!!", Toast.LENGTH_LONG).show();
+        }
 
     }
 }
