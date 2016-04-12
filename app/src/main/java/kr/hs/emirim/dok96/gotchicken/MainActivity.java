@@ -42,8 +42,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 //            startActivity(intent);
 //        }
         try{
-            Toast.makeText(this, name + "씨,집에 가구시퐁!!", Toast.LENGTH_LONG).show();
-            Intent intent = new Intent(this, ResultActivity.class);
+            Toast.makeText(this, name + "할리갈리야~", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this,ResultActivity.class);
             intent.putExtra("name",name);
             intent.putExtra("age",18);
             startActivity(intent);
