@@ -38,29 +38,7 @@ public class ResultActivity extends ActionBarActivity {
         int result = r.nextInt(3);
         Log.d(TAG,"랜덤값 생성 :"+result);
 
-        mImageView.setImageResource(R.drawable.co1+result);
-
-        //if
-      /*  if(result==0)
-        {
-           mImageView.setImageResource(R.drawable.co1);
-        }else if(result==1){
-            mImageView.setImageResource(R.drawable.co2);
-        }else if(result==2){
-            mImageView.setImageResource(R.drawable.co3);
-        }*/
-        /*
-        switch (result) {
-            case 0:
-                mImageView.setImageResource(R.drawable.co1);
-                break;
-            case 1:
-                mImageView.setImageResource(R.drawable.co2);
-                break;
-            case 2:
-                mImageView.setImageResource(R.drawable.co3);
-                break;
-        }*/
+        mImageView.setImageResource(R.drawable.one1 + result);
 
 
         Intent intent = getIntent();
@@ -70,6 +48,6 @@ public class ResultActivity extends ActionBarActivity {
 
         int age=intent.getIntExtra("age",-1);
         Log.d(TAG,"인텐트 값 읽기<age> :"+age);
-        mResult.setText(name + "님 , 하이염");
+        mResult.setText(name + ", 너 내 동료가 되라 ");
     }
 }
